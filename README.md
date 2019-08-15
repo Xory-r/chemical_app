@@ -1,24 +1,45 @@
-# README
+# CHEMICAL_APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+化学分野に特化した簡易版webアプリ
 
-Things you may want to cover:
+化学の勉強方法、実験装置の使い方、公開可能な研究成果を発信できる。
+個人、学生、企業、研究機関との交流ができる。
 
-* Ruby version
+非公開での研究情報を共有できる。
+職業、専門分野、勉強中の分野などの登録必須。
 
-* System dependencies
 
-* Configuration
+システム
+* AWS Cloud9
+* Heroku
 
-* Database creation
+言語
+* Ruby 2.6.3
+* Rails 5.2.3
 
-* Database initialization
+データベース
+* pg (production)
+* sqlite3(development, test)
 
-* How to run the test suite
+テスト
+* minitest
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+機能一覧
+* ユーザー登録
+* ログイン、ログアウト
+* セッション・クッキー
+* ユーザーの更新・表示・削除
+* アカウントの有効果
+* パスワードの再設定
+* 記事の投稿・更新・削除・制限
+* ページネイション
+* フォロー・フォロワー
+* ステータスフィード
 
-* ...
+* 記事の返信
+* ダイレクトメッセージ
+* カテゴリー
+* いいね
+* 記事の検索
+* 記事のシェア
