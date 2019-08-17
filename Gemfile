@@ -38,7 +38,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bundler'
 gem 'devise'
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'activeadmin'
+gem 'bootstrap_form', '~> 4.2'
+gem 'better_errors', '~> 2.5', '>= 2.5.1'
+gem 'carrierwave'
+gem 'ransack'
+gem 'kaminari'
+gem 'i18n'
 
 group :development, :test do
   gem 'sqlite3'
@@ -59,6 +65,7 @@ group :test do
   gem 'minitest'
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
+  gem 'faker'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
