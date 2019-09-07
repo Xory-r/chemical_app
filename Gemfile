@@ -38,13 +38,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bundler'
 gem 'devise'
-gem 'activeadmin'
+gem 'i18n'
 gem 'bootstrap_form'
 gem 'better_errors'
 gem 'carrierwave'
 gem 'ransack'
 gem 'kaminari'
-gem 'i18n'
+gem 'activeadmin'
 
 group :development, :test do
   gem 'sqlite3'
