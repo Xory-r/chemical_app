@@ -10,23 +10,38 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.user_id %></strong>.
-          <%= link_to 'Change profile', edit_user_registration_path %>
-          <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to 'Sign up', new_user_registration_path %>
-          <%= link_to 'Log in', new_user_session_path %>
-        <% end %>
-      </nav>
+    <header class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <nav>
+          <%= link_to "chemical app", root_path, id: "logo" %>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              Logged in as <strong><%= current_user.user_id %></strong>.
+              <li><%= link_to 'Change profile', edit_user_registration_path %></li>
+              <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'Sign up', new_user_registration_path %></li>
+              <li><%= link_to 'Log in', new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
     </header>
     
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= yield %>
-    
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      
+      <%= yield %>
+      
+      <footer class="footer">
+        <nav>
+          <ul>
+            <li><%= link_to "About",   '#' %></li>
+            <li><%= link_to "Contact", '#' %></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>
