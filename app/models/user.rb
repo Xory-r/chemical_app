@@ -4,9 +4,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable, :trackable,
          :recoverable, :rememberable, :validatable, :timeoutable, :lockable,
-         :authentication_keys => [:user_id]
+         :authentication_keys => [:name]
          
-  # user_idを必須、一意とする
-  validates_uniqueness_of :user_id
-  validates_presence_of :user_id
+  # nameを必須、一意とする
+  validates_uniqueness_of :name
+  validates_presence_of :name
 end

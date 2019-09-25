@@ -10,18 +10,18 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    # strong parametersを設定し、user_idを許可
+    # strong parametersを設定し、nameを許可
     
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit(:user_id, :email, :password, :password_confirmation)
+      user_params.permit(:name, :email, :password, :password_confirmation)
     end
     
     devise_parameter_sanitizer.permit(:sign_in) do |user_params|
-      user_params.permit(:user_id, :email, :password, :remember_me)
+      user_params.permit(:name, :email, :password, :remember_me)
     end
     
     devise_parameter_sanitizer.permit(:account_update) do |user_params|
-      user_params.permit(:user_id, :email, :password, :password_confirmation, :current_password)
+      user_params.permit(:name, :email, :password, :password_confirmation, :current_password)
     end
   end
 end
